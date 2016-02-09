@@ -1,0 +1,142 @@
+<!-DOCTYPE HTML-->
+<html>
+<head>
+
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" type="text/css"/>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<style type="text/css">
+#encavesado{
+    text-align: center;
+    font-size: 24px;
+    color: blue;
+    font-weight:bold;
+}
+#encavesado1{
+    text-align: center;
+    font-size: 10px;
+    color: #0080FF;
+    font-weight:bold;}
+</style>
+
+
+<script type="text/javascript">
+    $("document").ready(function inicio(){
+        alert("Prueba");
+        $("#btnSumar").tap(function(){
+           var num=parseInt($("#txtNum1").val());
+             var num2=parseInt($("#txtNum2").val());  
+             $("#txtRes").val(num+num2);
+        });
+       
+        $("#btnRestar").tap(function(){
+            var num=parseInt($("#txtNum1res").val());
+             var num2=parseInt($("#txtNum2res").val());  
+             $("#txtResres").val(num-num2);
+        });
+        
+        $("#btnMultiplicar").tap(function(){
+            var num=parseInt($("#txtNum1mul").val());
+             var num2=parseInt($("#txtNum2mul").val());  
+             $("#txtResmul").val(num*num2); 
+        });
+        $("#btnDivision").tap(function(){
+            var num=parseInt($("#txtNum1div").val());
+            var num2=parseInt($("#txtNum2div").val());
+            $("#txtResdiv").val(num/num2);
+        })
+    } );
+    
+    
+</script>
+</head>
+
+   <body>
+      <div data-role="page" id="principal">
+        <div data-role="header">
+            <h1>Practica jQuery</h1>
+            
+        </div>
+        <div data-role="content">
+           <p id="encavesado">Bienvenido ....</p>
+                <br>
+           <a href="#suma" data-role="button" data-transition="slideup">Suma</a>
+           <a href="#resta" data-role="button" data-transition="slidedown">Resta</a>
+           <a href="#multiplicacion" data-role="button" data-transition="top">Multiplicación</a>
+           <a href="#division" data-role="button" data-transition="flip">División</a>
+        </div>
+       <div data-role="footer">
+           
+      </div>
+       </div>
+     
+
+      <div data-role="page" id="suma">
+        <div data-role="header ">
+            <h1>Sumar ....</h1><br>
+           
+            
+        </div>
+        <div data-role="content ">
+            <input type="text" value=" " placeholder="Número 1" id="txtNum1"/>
+            <input type="text" value=" " placeholder="Número 2" id="txtNum2"/>
+            <input type="text" value=" " placeholder="Resultado" id="txtRes"/>
+             <input type="button" value="Sumar "  id="btnSumar"/>
+        </div>
+        <div data-role="footer">
+      </div>
+     </div>
+       
+<div data-role="page" id="resta">
+        <div data-role="header ">
+            <h1>Restar ....</h1><br>
+           
+            
+        </div>
+        <div data-role="content ">
+            <input type="text" value=" " placeholder="Número 1" id="txtNum1res"/>
+            <input type="text" value=" " placeholder="Número 2" id="txtNum2res"/>
+            <input type="text" value=" " placeholder="Resultado" id="txtResres"/>
+             <input type="button" value="Restar "  id="btnRestar"/>
+        </div>
+        <div data-role="footer">
+      </div>
+     </div>
+       
+        <div data-role="page" id="multiplicacion">
+        <div data-role="header ">
+            <h1>Multiplicar ....</h1><br>
+           
+            
+        </div>
+        <div data-role="content ">
+            <input type="text" value=" " placeholder="Número 1" id="txtNum1mul"/>
+            <input type="text" value=" " placeholder="Número 2" id="txtNum2mul"/>
+            <input type="text" value=" " placeholder="Resultado" id="txtResmul"/>
+             <input type="button" value="Multiplicar "  id="btnMultiplicar"/>
+        </div>
+        <div data-role="footer">
+      </div>
+     </div>
+     
+     
+      <div data-role="page" id="division">
+        <div data-role="header ">
+            <h1>Dividir ....</h1><br>
+           
+            
+        </div>
+        <div data-role="content ">
+            <input type="text" value=" " placeholder="Número 1" id="txtNum1div"/>
+            <input type="text" value=" " placeholder="Número 2" id="txtNum2div"/>
+            <input type="text" value=" " placeholder="Resultado" id="txtResdiv"/>
+             <input type="button" value="Division "  id="btnDivision"/>
+        </div>
+        <div data-role="footer">
+      </div>
+     </div>
+   </body>
+
+</html>
